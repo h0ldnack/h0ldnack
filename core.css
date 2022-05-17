@@ -1,0 +1,22 @@
+body, html {
+	color: #ffebcd;
+	background-color: black;
+	font-family:  sans-serif;
+	font-size: 1rem;
+}
+
+
+h2 {
+	font-size: 1.5rem;
+}
+
+a {
+	color: #08e8de;
+	text-decoration: none;
+}
+
+h1, h2, h3 {
+	color: #ffd699;
+
+}
+

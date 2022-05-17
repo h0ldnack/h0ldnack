@@ -1,0 +1,35 @@
+@import "core.css";
+
+.note {
+	font-size: 0.9rem;
+
+}
+/*Add responsive media queries for phones, so it is all 1 column*/
+.column-1 {
+  float: left;
+  width: 35%;
+  margin: 15px;
+}
+
+.column-2 {
+  float: right;
+  width: 60%;
+  margin: 24px 0px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.outerBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.innerBox {
+	padding: 7px;
+	font-size: 1.15rem;
+	max-width: 70%;
+}

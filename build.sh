@@ -2,11 +2,11 @@
 #! nix-shell -i fish -p pkgs.pandoc pkgs.python39Packages.weasyprint
 
 function build-markdown
-	pandoc index.html -f html -t markdown -s --css=style.css -o readme.md
+	pandoc index.html -f html -t markdown -s --css=webstyle.css -o readme.md
 end
 
 function build-pdf
-	pandoc index.html -f html -t pdf --pdf-engine=weasyprint --css=style.css -s -o resume.pdf
+	pandoc index.html -f html -t pdf --pdf-engine=weasyprint --css=pdf.css -s -o resume.pdf
 end
 
 function sync
