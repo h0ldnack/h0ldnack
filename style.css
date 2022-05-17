@@ -1,0 +1,31 @@
+body {
+	color: white;
+	background-color: black;
+	font-family:  sans-serif;
+	font-size: 1.1rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+
+a {
+	color: aqua;
+	text-decoration: none;
+}
+
+.outerBox {
+	height: 10vh;
+	padding: 0 20px;
+	margin: 100px 50px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.innerBox {
+	border-radius: 5px;
+	padding: 25px;
+	font-size: 1.15rem;
+}
