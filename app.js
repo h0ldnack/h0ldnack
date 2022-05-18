@@ -4,33 +4,63 @@ if ('serviceWorker' in navigator) {
 		.then(() => { console.log('Service Worker Registered'); });
 }
 
-btn.addEventListener('click', function() {
-  let promise = Notification.requestPermission();
-  // wait for permission
-})
 
-function notifyMe() {
-  // Let's check if the browser supports notifications
-  if (!("Notification" in window)) {
-    console.log("This browser does not support desktop notification");
+window.addEventListener('load', function () {
+  var button = document.getElementsByTagName('button')[0];
+
+  if (window.self !== window.top) {
+    // Ensure that if our document is in a frame, we get the user
+    // to first open it in its own tab or window. Otherwise, it
+    // won't be able to request permission to send notifications.
+    button.textContent = "View live result of the example code above";
+    button.addEventListener('click', () => window.open(location.href));
+    return;
   }
 
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
-  }
+  button.addEventListener('click', function () {
+    // If the user agreed to get notified
+    // Let's try to send ten notifications
+    if (window.Notification && Notification.permission === "granted") {
+      var i = 0;
+      // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
+      var interval = window.setInterval(function () {
+        // Thanks to the tag, we should only see the "Hi! 9" notification
+        var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+        if (i++ == 9) {
+          window.clearInterval(interval);
+        }
+      }, 200);
+    }
 
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied' || Notification.permission === "default") {
-    Notification.requestPermission(function (permission) {
-      // If the user accepts, let's create a notification
-      if (permission === "granted") {
-        var notification = new Notification("Hi there!");
-      }
-    });
-  }
+    // If the user hasn't told if they want to be notified or not
+    // Note: because of Chrome, we are not sure the permission property
+    // is set, therefore it's unsafe to check for the "default" value.
+    else if (window.Notification && Notification.permission !== "denied") {
+      Notification.requestPermission(function (status) {
+        // If the user said okay
+        if (status === "granted") {
+          var i = 0;
+          // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
+          var interval = window.setInterval(function () {
+            // Thanks to the tag, we should only see the "Hi! 9" notification
+            var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+            if (i++ == 9) {
+              window.clearInterval(interval);
+            }
+          }, 200);
+        }
 
-  // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them any more.
-}
+        // Otherwise, we can fallback to a regular modal alert
+        else {
+          alert("Hi!");
+        }
+      });
+    }
+
+    // If the user refuses to get notified
+    else {
+      // We can fallback to a regular modal alert
+      alert("Hi!");
+    }
+  });
+});
