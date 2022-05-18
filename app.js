@@ -3,15 +3,11 @@ if ('serviceWorker' in navigator) {
 		.register('/web-worker.js')
 		.then(() => { console.log('Service Worker Registered'); });
 }
-function notify() {
-	alert("Welcome")
-}
-function registerNotification() {
-	Notification.requestPermission(permission => {
-		if (permission === 'granted'){ notify() }
-		else console.error("Permission was not granted.")
-	})
-}
+
+btn.addEventListener('click', function() {
+  let promise = Notification.requestPermission();
+  // wait for permission
+})
 
 function notifyMe() {
   // Let's check if the browser supports notifications
