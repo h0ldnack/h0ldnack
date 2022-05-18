@@ -17,7 +17,7 @@ ul {
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #ffe699;
+  scrollbar-color: #ffe699 #111111;
 }
 
 /* Works on Chrome, Edge, and Safari */
