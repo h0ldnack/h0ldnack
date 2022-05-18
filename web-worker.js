@@ -12,6 +12,7 @@ self.addEventListener('install', (e) => {
 		   "resume.html",
 		   "index.html",
 		   "web-worker.js",
+		   "app.js",
 		   "manifest.json",
 		   "images/android-chrome-192x192.png",
 		   "images/apple-touch-icon.png",
