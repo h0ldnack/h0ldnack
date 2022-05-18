@@ -8,24 +8,7 @@
 	<title>Adam's Resume</title>
 	<link rel="stylesheet" type="text/css" href="webstyle.css">
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-	<script>
-	  if ('serviceWorker' in navigator) {
-		  navigator.serviceWorker
-			  .register('/web-worker.js')
-			  .then(() => { console.log('Service Worker Registered'); });
-	  }
-	  function notify() {
-		  alert("Welcome")
-	  }
-	  function registerNotification() {
-		  Notification.requestPermission(permission => {
-			  if (permission === 'granted'){ notify() }
-			  else console.error("Permission was not granted.")
-		  })
-	  }
-
-	  
-	</script>
+	<link rel="script" type="text/javascript" href="app.js">
 </head>
   <body>
 	<h1>My Personal Site</h1>
