@@ -1,9 +1,30 @@
 @import "core.css";
 
+body {
+	font-size: 1.15rem;
+}
+
+ul {
+	padding: 2px;
+	list-style-type: square;
+}
+
 .note {
 	font-size: 0.9rem;
 
 }
+
+@media screen and (max-width: 800px) {
+	body {
+		margin: 10% 20%;
+	}
+}
+
+@media screen and (min-width: 801px) {
+body {
+	margin: 4%;
+}
+
 /*Add responsive media queries for phones, so it is all 1 column*/
 .column-1 {
   float: left;
@@ -30,6 +51,6 @@ a:hover {
 
 .innerBox {
 	padding: 7px;
-	font-size: 1.15rem;
 	max-width: 70%;
+}
 }
