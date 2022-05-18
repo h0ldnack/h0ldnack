@@ -1,12 +1,9 @@
 #! /usr/bin/env nix-shell
 #! nix-shell -i fish -p pkgs.pandoc pkgs.python39Packages.weasyprint
 
-function build-markdown
-	pandoc index.html -f html -t markdown -s --css=webstyle.css -o readme.md
-end
 
 function build-pdf
-	pandoc index.html -f html -t pdf --pdf-engine=weasyprint --css=pdf.css -s -o resume.pdf
+	pandoc resume.html -f html -t pdf --pdf-engine=weasyprint --css=pdf.css -s -o resume.pdf
 end
 
 function sync
@@ -19,7 +16,6 @@ function sync
 end
 
 function main
-	#build-markdown
 	build-pdf
 	sync
 end
