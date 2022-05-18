@@ -14,7 +14,19 @@ ul {
 
 }
 
+@media screen and (max-width: 400px) {
+	body {
+		margin: 6% 10%;
+	}
+}
+
 @media screen and (max-width: 800px) {
+	body {
+		margin: 10% 20%;
+	}
+}
+
+@media screen and (max-width: 800px and max-he) {
 	body {
 		margin: 10% 20%;
 	}
