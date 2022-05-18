@@ -1,5 +1,5 @@
 #! /usr/bin/env nix-shell
-#! nix-shell -i fish -p pkgs.pandoc pkgs.python39Packages.weasyprint
+#! nix-shell -i fish -p pkgs.pandoc pkgs.python39Packages.weasyprint pkgs.entr
 
 
 function build-pdf
