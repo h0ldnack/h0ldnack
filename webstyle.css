@@ -29,7 +29,7 @@ ul {
 
 @media screen and (min-width: 801px) {
 body {
-	margin: 8% 10%;
+	margin: 8% 15%;
 }
 
 /*Add responsive media queries for phones, so it is all 1 column*/
