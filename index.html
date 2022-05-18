@@ -13,6 +13,12 @@
 			  .register('/web-worker.js')
 			  .then(() => { console.log('Service Worker Registered'); });
 	  }
+	  function registerNotification() {
+		  Notification.requestPermission(permission => {
+			  if (permission === 'granted'){ registerBackgroundSync() }
+			  else console.error("Permission was not granted.")
+		  })
+	  }
 	</script>
 </head>
   <body>
@@ -27,6 +33,10 @@
 		<li><a href="portfolio.html">Portfolio</a></li>
 		<li></li>
 	  </ul>
+	</section>
+	<section>
+	  <h2>Testing, Nothing to see here</h2>
+	  <a onclick="registerNotification()">Notify me when there are new attendees</a>
 	</section>
   </body>
 </html>
