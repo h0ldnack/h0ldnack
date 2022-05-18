@@ -14,6 +14,29 @@ ul {
 
 }
 
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffd699;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffd699;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffd699;
+  border-radius: 20px;
+  border: 3px solid #ffd699;
+}
+
+
+
 @media screen and (max-width: 400px) {
 	body {
 		margin: 6% 10%;
