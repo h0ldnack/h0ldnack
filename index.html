@@ -4,8 +4,16 @@
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="manifest" href="manifest.json">
 	<title>Adam's Resume</title>
 	<link rel="stylesheet" type="text/css" href="webstyle.css">
+	<script>
+	  if ('serviceWorker' in navigator) {
+		  navigator.serviceWorker
+			  .register('/web-worker.js')
+			  .then(() => { console.log('Service Worker Registered'); });
+	  }
+	</script>
 </head>
   <body>
 	<h1>My Personal Site</h1>
