@@ -4,8 +4,8 @@
   "short_name": "holdnack.net",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
-	"description": "A personal site that has no reason to be installed :)",
+  "theme_color": "#ffffff",
+  "description": "A personal site that has no reason to be installed :)",
   "icons": [{
     "src": "images/favicon-16x16.png",
     "sizes": "16x16",
