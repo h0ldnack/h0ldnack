@@ -13,12 +13,17 @@
 			  .register('/web-worker.js')
 			  .then(() => { console.log('Service Worker Registered'); });
 	  }
+	  function notfiy() {
+		  alert("Welcome")
+	  }
 	  function registerNotification() {
 		  Notification.requestPermission(permission => {
-			  if (permission === 'granted'){ registerBackgroundSync() }
+			  if (permission === 'granted'){ notify() }
 			  else console.error("Permission was not granted.")
 		  })
 	  }
+
+	  
 	</script>
 </head>
   <body>
