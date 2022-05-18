@@ -26,15 +26,10 @@ ul {
 	}
 }
 
-@media screen and (max-width: 800px and max-he) {
-	body {
-		margin: 10% 20%;
-	}
-}
 
 @media screen and (min-width: 801px) {
 body {
-	margin: 4%;
+	margin: 8% 10%;
 }
 
 /*Add responsive media queries for phones, so it is all 1 column*/
