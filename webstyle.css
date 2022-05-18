@@ -50,9 +50,44 @@ ul {
 }
 
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 801px) and (max-width: 1980px) {
 body {
 	margin: 8% 15%;
+}
+
+/*Add responsive media queries for phones, so it is all 1 column*/
+.column-1 {
+  float: left;
+  width: 35%;
+  margin: 15px;
+}
+
+.column-2 {
+  float: right;
+  width: 60%;
+  margin: 24px 0px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.outerBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.innerBox {
+	padding: 7px;
+	max-width: 70%;
+}
+}
+
+@media screen and (min-width: 1980px) {
+body {
+	margin: 8% 8%;
 }
 
 /*Add responsive media queries for phones, so it is all 1 column*/
