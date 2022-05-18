@@ -30,9 +30,9 @@ ul {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #111111;
+  background-color: #ffe699;
   border-radius: 20px;
-  border: 3px solid #ffe699;
+  border: 3px solid #111111;
 }
 
 
