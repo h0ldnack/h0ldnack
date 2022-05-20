@@ -1,6 +1,9 @@
 #! /usr/bin/env nix-shell
 #! nix-shell -i fish -p pkgs.pandoc pkgs.python39Packages.weasyprint pkgs.entr
 
+function build-txt
+	pandoc resume.html -f html -t plain -o resume.txt
+end
 
 function build-pdf
 	pandoc resume.html -f html -t pdf --pdf-engine=weasyprint --css=pdf.css -s -o resume.pdf

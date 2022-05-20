@@ -1,0 +1,76 @@
+The Resume
+
+General Facts
+
+-   BA in Economics
+-   Lives in Portland, OR
+-   Likes short walks in the rain
+
+Links
+
+-   Email
+-   Personal Website
+
+Skills
+
+Hard Skills
+
+-   Web Development | 3 Years
+    I use plain HTML/CSS/JS.
+-   Sys-Admin | 5 Years
+    Strong focus on Linux
+-   Python Programming | 4 Years
+    I mostly write it in a lightly functional style.
+-   Design | 4 Years
+    I am defintely not a savant at it, but I can iterate to a good
+    design.
+
+Soft Skills
+
+-   Communicating
+    I can understand anyone's perspective
+-   Writing
+    I've easily written a few hundred pages on various subject matters
+-   Problem Solving
+    I start by analyzing the desired outcome and construct a rough
+    outline of the expected resources necessary to produce a desirable
+    result.
+-   Funny
+    Well kinda funny
+
+    Okay kinda funny in the right context
+
+About
+
+I am currently looking for work, like all of us poor worker-bees. I
+don't really have strong feelings on what I want to do. I've worked on
+tech as a hobby for about a decade, so I've accumulated a fair amount of
+experience in a wide range of technical areas. So no, I won't care about
+being a WORKPLACE-HERO™ or any other "fun" corporate terminology. I am a
+skilled and self-motivated worker, who can easily excel in a good
+working environment.
+
+Experience
+
+Strang Hall | Restaurant
+
+I did standard host/busser/waiter work. I took the job because I needed
+to be around people after lockdown. I left because I was moving to
+Portland.
+
+ScriptPro | IT Customer Support
+
+The company built pill dispensing machines, and I worked on customer
+support. So I remotely troubleshoot windows, physical machine failures
+and other related issues. I left because I needed to take some time to
+work through some mental health issues.
+
+Personal Projects
+
+I've worked on a variety of projects over the years, ranging from
+static-site-generators to viable-systems model network simulators to
+highly experimental stenography theories. Unfortunately, I have also had
+the bad habit of hopping to a new shiny project before finishing old
+projects. So, I am currently in the process of reviewing and finishing
+up some of my old projects. Once I have finished a few, I will include a
+link to my portfolio in the links section.
