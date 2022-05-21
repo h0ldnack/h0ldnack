@@ -2,8 +2,11 @@
 #pkgs.pandoc pkgs.python39Packages.weasyprint pkgs.entr
 
 fn gen-index {
+  fn t {
+	fd --type file --extension html --strip-cwd-prefix '.'
+  }
   var DN = "https://holdnack.net"
-  fd --type file --extension html --strip-cwd-prefix '.' | put FF
+  var FF = t
   for F FF {
 	echo $F
   }
