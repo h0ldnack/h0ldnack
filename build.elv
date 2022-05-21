@@ -7,7 +7,7 @@ fn gen-index {
   }
   var DN = "https://holdnack.net"
   var FF = t
-  for F FF {
+  for F $FF {
 	echo $F
   }
 }
