@@ -4,7 +4,7 @@
 fn gen-index {
   var FF = (date) #(fd --type=file --extension=html --strip-cwd-prefix '.')
   var DN = "https://holdnack.net"
-  for F FF {
+  for F $FF {
 	echo $F
   }
 }
