@@ -12,7 +12,7 @@ fn build-pdf {
 
 fn sync {
   var DATE = (date --iso-8601=hours)
-  var MSG = (echo "Automatically added on $DATE")
+  var MSG = (echo "Automatically added on " $DATE)
   try {
 	git pull
 	git add *
