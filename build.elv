@@ -2,12 +2,9 @@
 #pkgs.pandoc pkgs.python39Packages.weasyprint pkgs.entr
 
 fn gen-index {
-  fn t {
-	return fd --type file --extension html --strip-cwd-prefix '.'
-  }
+  var FF = (date) #(fd --type=file --extension=html --strip-cwd-prefix '.')
   var DN = "https://holdnack.net"
-  var FF = t
-  for F $FF {
+  for F FF {
 	echo $F
   }
 }
@@ -30,7 +27,7 @@ fn sync {
 	git commit -m $MSG
 	git push -u origin main
   } catch e {
-	dunstify "Remote commit failed for holdnack.net | because $e"
+	dunstify "Remote commit failed for holdnack.net | because"$e
   }
 }
 
