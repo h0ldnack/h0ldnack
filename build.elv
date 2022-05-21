@@ -2,7 +2,11 @@
 #pkgs.pandoc pkgs.python39Packages.weasyprint pkgs.entr
 
 fn gen-index {
-  fd --type file --extension html '.' > sitemap.txt
+  var DN = "https://holdnack.net"
+  fd --type file --extension html --strip-cwd-prefix '.' | put FF
+  for F FF {
+	echo $F
+  }
 }
 
 fn build-txt {
