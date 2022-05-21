@@ -3,7 +3,7 @@
 
 fn gen-index {
   fn t {
-	fd --type file --extension html --strip-cwd-prefix '.'
+	return fd --type file --extension html --strip-cwd-prefix '.'
   }
   var DN = "https://holdnack.net"
   var FF = t
