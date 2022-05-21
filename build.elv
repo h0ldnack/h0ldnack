@@ -4,7 +4,7 @@
 fn gen-index {
   var FF = (date --iso-8601) #()
   var DN = "https://holdnack.net"
-  fd --type=file --extension=html --strip-cwd-prefix '.' | each {|x| put $DN$x} 
+  fd --type=file --extension=html --strip-cwd-prefix '.' | each {|x| put $DN"/"$x} 
 }
 
 fn build-txt {
