@@ -13,10 +13,14 @@ fn build-pdf {
 fn sync {
   var DATE = (date --iso-8601=hours)
   var MSG = "Automatically added on <$DATE>"
-  git pull
-  git add *
-  git commit -m "$MSG"
-  git push -u origin main
+  try {
+	git pull
+	git add *
+	git commit -m $MSG
+	git push -u origin main
+  } catch e {
+	dunstify "Remote commit failed for holdnack.net | because $e"
+  }
 }
 
 fn main {
