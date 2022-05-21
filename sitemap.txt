@@ -1,4 +1,4 @@
-./404.html
-./index.html
-./portfolio.html
-./resume.html
+https://holdnack.net/404.html
+https://holdnack.net/index.html
+https://holdnack.net/portfolio.html
+https://holdnack.net/resume.html
