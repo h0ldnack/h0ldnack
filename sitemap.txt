@@ -1,0 +1,4 @@
+./404.html
+./index.html
+./portfolio.html
+./resume.html
