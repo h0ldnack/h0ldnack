@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+	  body, html {
+		  color: #ffebcd;
+		  background-color: black;
+		  font-family:  sans-serif;
+		  font-size: 1rem;
+	  }
+	</style>
+	<meta charset="utf-8">
+	<meta name="description" content="Some little tools, eventually">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="manifest" href="manifest.json">
+	<title>Little Toolie</title>
+	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="webstyle.css">
+	<link rel="icon" href="images/favicon.ico">
+</head>
+  <body class="single-column">
+	<h1>A collection of Useful Little Tools</h1>
+	<section>
+	  <h2>Get RSS Feed from Youtube Channel</h2>
+	  <p>
+		This project was the inspiration for this page.
+		However, the current implementation, which scrapes Youtube directly, is heidously inefficient.
+		It takes ~10s to return 1 channel id; I might be able to optimize it a bit, but not enough to make it worth while.
+		If I am going to do this, I'll need to use the Youtube API, which is just a bit more hassle.
+		I'd use a simple middle server that reads from a cache if the channel name has already been tried, and if not pull fresh.
+		Also enforce quota; easy enough with a simple request counter and then lock new requests until the next day.
+	  </p>
+	</section>
+	<script src="./js/instantpage-5.1.0.js" type="module" defer></script>
+  </body>
+</html>
