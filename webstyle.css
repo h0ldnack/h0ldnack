@@ -111,11 +111,11 @@ a:hover {
 
 @media screen and (min-width: 1980px) {
 	body {
-		margin: 4% 8%;
+		margin: 2% 8%;
 	}
 	
 	.single-column {
-		margin: 4% 41%
+		margin: 2% 41%
 	}
 
 /*Add responsive media queries for phones, so it is all 1 column*/
