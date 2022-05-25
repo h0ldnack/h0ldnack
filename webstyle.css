@@ -14,6 +14,12 @@ ul {
 
 }
 
+code {
+	margin-bottom: 20px;
+	border: dotted #ffe699;
+
+}
+
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
@@ -37,23 +43,41 @@ ul {
 
 
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 1px) and (max-width: 400px) {
 	body {
 		margin: 6% 10%;
 	}
+	.single-column {
+		margin: 8% 18%
+	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 401px) and (max-width: 800px) {
 	body {
 		margin: 10% 20%;
+	}
+		.single-column {
+		margin: 8% 22%
+	}
+}
+
+@media screen and (min-width: 801px) and (max-width: 1300px) {
+	body {
+		margin: 8% 15%;
+	}
+	.single-column {
+		margin: 6% 28%
 	}
 }
 
 
-@media screen and (min-width: 801px) and (max-width: 1980px) {
-body {
-	margin: 8% 15%;
-}
+@media screen and (min-width: 1301px) and (max-width: 1980px) {
+	body {
+		margin: 8% 15%;
+	}
+	.single-column {
+		margin: 6% 37%
+	}
 
 /*Add responsive media queries for phones, so it is all 1 column*/
 .column-1 {
@@ -86,9 +110,13 @@ a:hover {
 }
 
 @media screen and (min-width: 1980px) {
-body {
-	margin: 8% 8%;
-}
+	body {
+		margin: 4% 8%;
+	}
+	
+	.single-column {
+		margin: 4% 41%
+	}
 
 /*Add responsive media queries for phones, so it is all 1 column*/
 .column-1 {

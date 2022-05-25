@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+	  body, html {
+		  color: #ffebcd;
+		  background-color: black;
+		  font-family:  sans-serif;
+		  font-size: 1rem;
+	  }
+	</style>
+	<meta charset="utf-8">
+	<meta name="description" content="A collection of useful information on SystemD">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="./../webstyle.css">
+</head>
+  <body class="single-column">
+	<h1>SystemD: Tips and Tricks</h1>
+	<section>
+	  <h2></h2>
+	  <p>
+		
+	  </p>
+	  <h3>A Quick Note for the SystemD Haters</h3>
+	  <p>
+		Yes, SystemD is big and includes many components that feel out of place in an init system.
+		Why the fuck is <a href="https://wiki.archlinux.org/title/Systemd-homed">SystemD Homed</a> a core part of it?
+		However, regardless to how anyone feels, it is a standard that is used in the massive majority of Linux distros.
+		So for practical purposes, it is very useful to know and understand.
+		I also don't dislike many of its core functionality, I think it does a good-enough job with it.
+	  </p>
+	</section>
+	<section>
+	  <h2>Hardening</h2>
+	  <p>
+		This is focused on ways to increase the security of your SystemD files.
+		It is mostly focused on service unit files, but might include info for the other types as well.
+	  </p>
+	  <h3>Don't worry too much about a High Security score</h3>
+	  <div>
+		Running the below command will output a list of the current users systemD services with a security score.
+	  </div>
+		<code>
+		  systemd-analyze security
+		</code>
+	  <div>
+	  Most of the scores will be very high (above 9) on a default system.
+	  This is because most distros don't harden or require systemD services to be hardened.
+	  Its not saying, "PANIC! YOUR ABOUT TO GET HACKED!", its saying "You have a shitty lock and no bars on your windows."
+	  Now for many people you don't NEED bars on your Windows, but to strech this metaphor way to far, systemD hardening is like bars that are invisible and cause no inconvience.
+	  You just need to setup them up properly and you should be able to never think of them again.
+	  I have general security related post <a href="comp-security.html">here</a> that goes into more detail.
+	  </div>
+	  <h3>Almost always Safe</h3>
+	  <div>
+		All of the following options are safe to set on .
+		Also if they are going to cause a problem, they will do so immediately.
+	  </div>
+	  <ul>
+		<li>
+		  <code>PrivateDevices=true</code>
+		  <div></div>
+		</li>
+		<li>
+		  <code>ProtectControlGroups=true</code>
+		  <div></div>
+		</li>
+		<li>
+		  <code>ProtectHome=true</code>
+		  <div></div>
+		</li>
+		<li>
+		  <code>ProtectKernelTunables=true</code>
+		  <div></div>
+		</li>
+		<li>
+		  <code>ProtectSystem=full</code>
+		  <div></div>
+		</li>
+		<li>
+		  <code>RestrictSUIDSGID=true</code>
+		  <div></div>
+		</li>
+	  </ul>
+	</section>
+	<section>
+	  <h3>Significant Changes</h3>
+	  <div>
+		These are options that you need to know how the program being run works.
+		They can also greatly reduce your attack-surface, so they should be seriously considered for valuable programs.
+		As an example for a valuable program would be a publically facing HTTP server, or honestly anything tied to networking at all.
+	  </div>
+	  <ul>
+		<li>
+		  <code>DynamicUser=true</code>
+		  <div>
+			Creates an ephemeral user.
+			Personally, I recommend using the 'user' and 'group' options to name the ephemeral user/group.
+			If you don't set them, there names are derived from the service name.
+			It does also change how alot of other options work, so you'll want to double check that; see <a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html">man page</a> for info.
+		  </div>
+		  <h4>Thing to remember</h4>
+		  <ul>
+			<li>UIDs/GIDs are from the 61184-65519 range
+			  <div class="note">
+				So don't allocate static users in this range
+			  </div>
+			</li>
+			<li>UIDs/GIDs get recycled after the services shuts down
+			  <div class="note">
+				So you really need to be sure not to persist anything between running, because a completely seperate service might exist with the same UID/GID and cause painful problems.
+			  </div>
+			</li>
+			<li>If a static username or groups already exists with the same, IT WILL BE USED, NOT A DYNAMIC USER!
+			  <div class="note">
+				Honestly, the biggest footgun with this option.
+			  </div>
+			</li>
+			<li>The service will have no implicit directory access
+			  <div>You must add in directories explictly through the different possible options</div>
+			</li>
+			<li><div></div></li>
+		  </ul>
+		</li>
+		
+	  </ul>
+	</section>
+	<section>
+	  <h2>Reference Links:</h2>
+	  <ul>
+		<li><a href="https://0pointer.net/blog/">1</a></li>
+		<li><a href="https://ruderich.org/simon/notes/systemd-service-hardening">2</a></li>
+		<li><a href="https://www.linuxjournal.com/content/systemd-service-strengthening">3</a></li>
+		<li><a href="https://www.ctrl.blog/entry/systemd-service-hardening.html">4</a></li>
+		<li><a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html">5</a></li>
+		<li><a href="">6</a></li>
+	  </ul>
+	</section>
+  </body>
+</html>

@@ -1,6 +1,9 @@
 #! /usr/bin/env elvish
 #pkgs.pandoc pkgs.python39Packages.weasyprint pkgs.entr
 
+# TODO: Add a testing step
+# It would convert all html to plain text and run spell check, look for flagged words, hard rewrite certain phrases, etc
+
 fn gen-index {
   var FF = (date --iso-8601) #()
   var DN = "https://holdnack.net"
