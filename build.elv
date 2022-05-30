@@ -35,7 +35,7 @@ fn sync {
 fn main {
   gen-index
   build-txt
-  build-pdf
+  #build-pdf
   sync
 }
 
