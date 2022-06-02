@@ -27,10 +27,10 @@
 	  </p>
 	  <ul>
 		<li>
-		  A stenography theory based on semantic relationships, rather then phonetic
+		  A stenography theory based on semantic relationships, rather then phonetics
 		  <div>The Hard problem is properly choosing and pruning the relationships used to efficiently compose strokes.</div>
 		</li>
-		<li>A geometrically defined script
+		<li>A geometric script
 		  <div>I.E. All verbs are squares and all nouns are circles. Much more complex then that in practice, but that's the basic idea</div>
 		</li>
 		<li>
@@ -38,6 +38,45 @@
 		  <div></div>
 		</li>
 	  </ul>
+	</section>
+	<section>
+	  <h2>Mullvadi</h2>
+	  <a href="https://github.com/h0ldnack/mullvadi">Github Link</a>
+	  <p>
+		A helper script for performing some high level functions with <a href=https://mullvad.net/en/">Mullvad</a>, my preferred vpn provider.
+		I recently switched to <a href="https://voidlinux.org/">Void Linux</a>, because I am a hipser doofus, and it doesn't have the mullvad-vpn cli app packaged.
+		I tried to package it, but I just switched to Void and don't know xbps at all.
+		So I decided to write my own version.
+	  </p>
+	  <p>
+		It also has some functionality that you can't get in the official mullvad app.
+		It can choose the vpn endpoint that currently has the best perf.
+		It can automitically rotate between wireguard configs.
+	  </p>
+	  <p>
+		I also have some ideas for more functionality
+		<ol>
+		  <li>Periodically run a tcpdump trace and check for potential leaks</li>
+		  <li>Test for increase of captcha's and rotate when they reach a certain level
+			<div>I currently get captcha'd on every google query :(</div>
+		  </li>
+		</ol>
+	  </p>
+	  <p>
+		There are some current downsides.
+		<ol>
+		  <li>
+			Its a random app made by a competent, but by no means expert programmer.
+		  </li>
+		  <li>
+			A lot of cmds require root, which the official app does not require.
+			I think it communicates with a service that runs as root, so I might try somethign similar
+		  </li>
+		  <li>
+			Its VERY new, so yeah all cmds "work", but expect bugs.
+		  </li>
+		</ol>
+	  </p>
 	</section>
   </body>
 </html>
