@@ -1,3 +1,9 @@
+async function persistData() {
+  if (navigator.storage && navigator.storage.persist) {
+    const result = await navigator.storage.persist();
+    console.log(`Data persisted: ${result}`);
+}
+
 caches.open("pwa-assets")
 .then(cache => {
 	cache.addAll(["core.css",
@@ -42,3 +48,5 @@ self.addEventListener('fetch', (e) => {
     caches.match(e.request).then((response) => response || fetch(e.request)),
   );
 });
+
+persistData()
