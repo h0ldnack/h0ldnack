@@ -8,3 +8,4 @@ https://holdnack.net/posts/choosing-a-programming-lang.html
 https://holdnack.net/posts/probablistic-data-structures.html
 https://holdnack.net/posts/systemd.html
 https://holdnack.net/resume.html
+https://holdnack.net/things-i-like.html

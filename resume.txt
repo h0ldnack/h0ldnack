@@ -1,15 +1,11 @@
-The Resume
-
-General Facts
-
--   BA in Economics
--   Lives in Portland, OR
--   Likes short walks in the rain
-
-Links
+Contact Me
 
 -   Email
 -   Personal Website
+-   H0ldnack
+-   Portland Oregon USA
+
+The Resume
 
 Skills
 
@@ -18,7 +14,7 @@ Hard Skills
 -   Web Development | 3 Years
     I use plain HTML/CSS/JS.
 -   Sys-Admin | 5 Years
-    Strong focus on Linux
+    Strong focus on Linux and Web-Orientated services
 -   Python Programming | 4 Years
     I mostly write it in a lightly functional style.
 -   Design | 4 Years
@@ -52,13 +48,18 @@ working environment.
 
 Experience
 
-Strang Hall | Restaurant
+Benedictine College| BA in Economics | 2015-2019
+
+I had realized that I didn't want to work directly in Economics by my
+last semester.
+
+Strang Hall | Restaurant | 2021-2022
 
 I did standard host/busser/waiter work. I took the job because I needed
 to be around people after lockdown. I left because I was moving to
 Portland.
 
-ScriptPro | IT Customer Support
+ScriptPro | IT Customer Support | 2019-2020
 
 The company built pill dispensing machines, and I worked on customer
 support. So I remotely troubleshoot windows, physical machine failures

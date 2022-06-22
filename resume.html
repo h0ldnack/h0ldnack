@@ -10,64 +10,78 @@
   </head>
   <body>
 	<div class="column-1">
-	<h1>The Resume</h1>
-	<h2>General Facts</h2>	
-	<section class="innerBox">
-	  <ul>
-		<li>BA in Economics</li>
-		<li>Lives in Portland, OR</li>
-		<li>Likes short walks in the rain</li>
-	  </ul>
-		<h3>Links</h3>
+	  <section class="card">
+		<h1>Contact Me</h1>
 		<ul>
-		  <li><a href="mailto:resume@mail.holdnack.net">Email</a></li>
-		  <li><a href="https://holdnack.net">Personal Website</a></li>
-		</ul>
-	  </section>
-	  <h2>Skills</h2>
-	  <section class="innerBox">
-		<h3>Hard Skills</h3>
-		<ul>
-		  <li>Web Development | 3 Years
-			<div class="note">
-			  I use plain HTML/CSS/JS.
-			</div>
+		  <li title="email">
+			<a class="u-email" href="mailto:resume@mail.holdnack.net">Email</a>
 		  </li>
-		  <li>Sys-Admin | 5 Years
-			<div class="note">Strong focus on Linux</div>
+		  <li title="website">
+			<a class="u-url website" href="https://holdnack.net">Personal Website</a>
 		  </li>
-		  <li>Python Programming | 4 Years
-			<div class="note">I mostly write it in a lightly functional style.</div>
+		  <li title="github">
+			<a class="u-url github" href="https://github.com/h0ldnack">H0ldnack</a>
 		  </li>
-		  <li>Design | 4 Years
-			<div class="note">I am defintely not a savant at it, but I can iterate to a good design.</div>
-		  </li>
-		</ul>
-		<h3>Soft Skills</h3>
-		<ul>
-		  <li>
-			Communicating
-			<div class="note">I can understand anyone's perspective</div>
-		  </li>
-		  <li>
-			Writing
-			<div class="note">I've easily written a few hundred pages on various subject matters</div>
-		  </li>
-		  <li>
-			Problem Solving
-			<div class="note">I start by analyzing the desired outcome and construct a rough outline of the expected resources necessary to produce a desirable result.</div>
-		  </li>
-		  <li>
-			Funny
-			<div class="note">Well kinda funny</div>
-			<div class="note">Okay kinda funny in the right context</div>
+		  <li title="address">
+			<address class="p-adr h-adr">
+			  <span class="p-locality">Portland</span>
+			  <span class="p-region">Oregon</span>
+			  <span class="p-country-name">USA</span>
+			</address>
 		  </li>
 		</ul>
 	  </section>
+	  <section class="resume">
+		<h1>The Resume</h1>
+		<section class="innerBox skills">
+		  <h2>Skills</h2>
+		  <h3>Hard Skills</h3>
+		  <ul>
+			<li>Web Development | 3 Years
+			  <div class="note">
+				I use plain HTML/CSS/JS.
+			  </div>
+			</li>
+			<li>Sys-Admin | 5 Years
+			  <div class="note">Strong focus on Linux and Web-Orientated services</div>
+			</li>
+			<li>Python Programming | 4 Years
+			  <div class="note">I mostly write it in a lightly functional style.</div>
+			</li>
+			<li>Design | 4 Years
+			  <div class="note">I am defintely not a savant at it, but I can iterate to a good design.</div>
+			</li>
+		  </ul>
+		  <h3>Soft Skills</h3>
+		  <ul>
+			<li>
+			  Communicating
+			  <div class="note">I can understand anyone's perspective</div>
+			</li>
+			<li>
+			  Writing
+			  <div class="note">I've easily written a few hundred pages on various subject matters</div>
+			</li>
+			<li>
+			  Problem Solving
+			  <div class="note">I start by analyzing the desired outcome and construct a rough outline of the expected resources necessary to produce a desirable result.</div>
+			</li>
+			<li>
+			  Funny
+			  <div class="note">Well kinda funny</div>
+			  <div class="note">Okay kinda funny in the right context</div>
+			</li>
+		  </ul>
+		</section>
 	</div>
 	<div class="outerBox column-2">
-	  <h2>About</h2>
-	  <section class="innerBox">
+	  <section class="innerBox p-summary">
+		<h2>About</h2>
+		<!-- <p>
+		  I am currently looking for work.
+		  I've been
+		  I have recently started learning go, and I am so far enjoying the lazer focus on simplicity.
+		</p>-->
 		<p>
 		  I am currently looking for work, like all of us poor worker-bees.
 		  I don't really have strong feelings on what I want to do.
@@ -76,15 +90,19 @@
 		  I am a skilled and self-motivated worker, who can easily excel in a good working environment.
 		</p>
 	  </section>
-	  <h2>Experience</h2>
-	  <section class="innerBox">
-		<h3>Strang Hall | Restaurant</h3>
+	  <section class="innerBox experience">
+		<h2>Experience</h2>
+		<h3>Benedictine College| BA in Economics | 2015-2019</h3>
+		<p>
+		  I had realized that I didn't want to work directly in Economics by my last semester.
+		</p>
+		<h3>Strang Hall | Restaurant | 2021-2022</h3>
 		<p>
 		  I did standard host/busser/waiter work.
 		  I took the job because I needed to be around people after lockdown.
 		  I left because I was moving to Portland.
 		</p>
-		<h3>ScriptPro | IT Customer Support</h3>
+		<h3>ScriptPro | IT Customer Support | 2019-2020</h3>
 		<p>
 		  The company built pill dispensing machines, and I worked on customer support.
 		  So I remotely troubleshoot windows, physical machine failures and other related issues.
@@ -99,5 +117,6 @@
 		</p>
 	  </section>
 	</div>
+	  </section>
   </body>
 </html> 
